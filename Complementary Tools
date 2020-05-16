@@ -1,0 +1,4 @@
+#instalar Notepad ++
+sudo apt-get install snapd
+sudo apt-get install wine-stable
+sudo snap install notepad-plus-plus

@@ -1,2 +1,4 @@
 #Comando  TexStudio
 sudo apt install texlive-formats-extra
+
+sudo apt-get install texlive-lang-spanish

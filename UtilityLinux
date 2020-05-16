@@ -1,0 +1,22 @@
+#barra de progreso en consola
+wget http://ftp.gnu.org/gnu/coreutils/coreutils-8.21.tar.xz
+tar xvJf coreutils-8.21.tar.xz
+cd coreutils-8.21/
+wget http://zwicke.org/web/advcopy/advcpmv-0.5-8.21.patch
+patch -p1 -i advcpmv-0.5-8.21.patch
+./configure
+make
+
+sudo cp src/cp /usr/local/bin/cp
+sudo cp src/mv /usr/local/bin/mv
+
+	
+alias cp='/home/USUARIO/advancedcopy/coreutils-8.21/src/cp -g'
+alias mv='/home/USUARIO/advancedcopy/coreutils-8.21/src/mv -g'
+
+#Script para Bachup
+#!/bin/bash #typically the first line of the bash scripts
+BACKUPTIME=`date +%b-%d-%y` #get the current date
+DESTINATION=/home/usr/path/backup-$BACKUPTIME.tar.gz #create a backup file using the current date in it's name
+SOURCEFOLDER=/home/usr/path/data_folder #the folder that contains the files that we want to backup
+tar -cpzf $DESTINATION $SOURCEFOLDER #create the backup
