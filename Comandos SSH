@@ -1,0 +1,23 @@
+#comandos SSH
+
+COPIAR ARCHIVOS DE LOCAL A SERVIDOR
+
+$ scp archivo.txt usuario@dominio.com:/home/usuario
+
+COPIAR ARCHIVOS DE SERVIDOR A LOCAL
+
+$ scp usuario@dominio.com:/home/usuario/archivo.txt Documentos
+
+COPIAR ARCHIVOS DE SERVIDOR A SERVIDOR
+
+$ scp usuario1@dominio1.com:/home/usuario1/archivo.txt usuario2@dominio2.com:/home/usuario2/
+
+
+COPIAR UN DIRECTORIO COMPLETO
+
+$ scp -r /home/mario/carpeta usuario@dominio.com:/home/usuario
+
+
+LIMITAR EL ANCHO DE BANDA
+
+$ scp -l limite usuario@dominio.com:/home/usuario/archivo.txt Documentos
